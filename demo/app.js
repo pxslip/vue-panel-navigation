@@ -1,13 +1,9 @@
-import Vue from 'vue';
-import VpNav from '../src/index.js'
+import Vue from "vue";
+import VpNav from "../src/index.js";
+import App from "./App.vue";
 
 Vue.use(VpNav);
 
 new Vue({
-    el: '#app',
-    data() {
-        return {
-            numPanels: 10
-        }
-    }
-});
+  render: (h) => h(App),
+}).$mount("#app");
