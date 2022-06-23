@@ -1,6 +1,6 @@
 {
   "name": "vue-panel-navigation",
-  "version": "1.0.3",
+  "version": "1.0.4-beta.0",
   "description": "A vue fullscreen-esque navigation plugin",
   "main": "dist/vue-panel-navigation.cjs.js",
   "module": "dist/vue-panel-navigation.esm.js",
