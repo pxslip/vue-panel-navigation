@@ -117,18 +117,23 @@ export default function install(Vue, options) {
         }
     };
 
-    Vue.prototype.$setActiveSection = function (uuid) {
-        Vue.vp.sections.forEach(function (item) {
-            item.active = (item.uuid === uuid);
-        });
-    };
+  Vue.prototype.$setActiveSection = function (uuid) {
+    Vue.vp.sections.forEach(function (item) {
+      item.active = item.uuid === uuid;
+      if (item.uuid !== uuid) {
+        // make sure all the children of inactive sections are inactive
+        Vue.vp.panels[item.uuid].forEach((item) => (item.active = false));
+      }
+    });
+  };
 
-    Vue.prototype.$setActivePanel = function (uuid, sectionUuid) {
-        let key = sectionUuid || 'default';
-        Vue.vp.panels[key].forEach(function (item) {
-            item.active = (item.uuid === uuid);
-        });
+  Vue.prototype.$setActivePanel = function (uuid, sectionUuid = "default") {
+    const panel = Vue.vp.panels[sectionUuid].find((item) => item.uuid === uuid);
+    if (panel) {
+      Vue.vp.panels[sectionUuid].forEach((item) => (item.active = false));
+      panel.active = true;
     }
+  };
 
     Vue.prototype.$setExcludeFromNav = function (uuid, sectionUuid, value) {
         let key = sectionUuid || 'default';
