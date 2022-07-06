@@ -1,6 +1,6 @@
 {
   "name": "vue-panel-navigation",
-  "version": "1.0.4-beta.0",
+  "version": "1.0.4-beta.2",
   "description": "A vue fullscreen-esque navigation plugin",
   "main": "dist/vue-panel-navigation.cjs.js",
   "module": "dist/vue-panel-navigation.esm.js",
@@ -18,7 +18,7 @@
     "panels",
     "navigation"
   ],
-  "author": "Will Kruse <wskruse@gmail.com>",
+  "author": "Will K (pxslip) <dev@pxslip.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pxslip/vue-panel-navigation/issues"

@@ -141,7 +141,7 @@ export default function install(Vue, options) {
 
   Vue.prototype.$setActivePanel = function (uuid, sectionUuid = "default") {
     const panel = Vue.vp.panels[sectionUuid].find((item) => item.uuid === uuid);
-    if (panel && panel.excludeFromNav) {
+    if (panel && !panel.excludeFromNav) {
       Vue.vp.panels[sectionUuid].forEach((item) => (item.active = false));
       panel.active = true;
     }

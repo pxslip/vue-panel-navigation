@@ -737,7 +737,7 @@ function install(Vue, options) {
     var panel = Vue.vp.panels[sectionUuid].find(function (item) {
       return item.uuid === uuid;
     });
-    if (panel && panel.excludeFromNav) {
+    if (panel && !panel.excludeFromNav) {
       Vue.vp.panels[sectionUuid].forEach(function (item) {
         return item.active = false;
       });
