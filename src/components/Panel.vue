@@ -27,7 +27,7 @@ export default {
     return {
       section: null,
       uuid: null,
-      sectionUuid: null,
+      sectionUuid: "default",
     };
   },
   watch: {
@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     getSectionUuid() {
-      if (!this.sectionUuid && this.section) {
+      if (this.sectionUuid === "default" && this.section) {
         this.sectionUuid = this.section.dataset.uuid;
       }
       return this.sectionUuid;

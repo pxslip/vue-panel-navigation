@@ -448,7 +448,7 @@ var script$3 = {
     return {
       section: null,
       uuid: null,
-      sectionUuid: null
+      sectionUuid: "default"
     };
   },
 
@@ -462,7 +462,7 @@ var script$3 = {
   },
   methods: {
     getSectionUuid: function getSectionUuid() {
-      if (!this.sectionUuid && this.section) {
+      if (this.sectionUuid === "default" && this.section) {
         this.sectionUuid = this.section.dataset.uuid;
       }
       return this.sectionUuid;
@@ -517,10 +517,10 @@ __vue_render__$3._withStripped = true;
 /* style */
 var __vue_inject_styles__$3 = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-8b8318f4_0", { source: "\n\n/*# sourceMappingURL=Panel.vue.map */", map: { "version": 3, "sources": ["Panel.vue"], "names": [], "mappings": ";;AAEA,oCAAoC", "file": "Panel.vue" }, media: undefined });
+  inject("data-v-24530a5d_0", { source: "\n\n/*# sourceMappingURL=Panel.vue.map */", map: { "version": 3, "sources": ["Panel.vue"], "names": [], "mappings": ";;AAEA,oCAAoC", "file": "Panel.vue" }, media: undefined });
 };
 /* scoped */
-var __vue_scope_id__$3 = "data-v-8b8318f4";
+var __vue_scope_id__$3 = "data-v-24530a5d";
 /* module identifier */
 var __vue_module_identifier__$3 = undefined;
 /* functional template */

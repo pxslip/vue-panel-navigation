@@ -1,12 +1,13 @@
 {
   "name": "vue-panel-navigation",
-  "version": "1.0.4-beta.2",
+  "version": "1.0.5",
   "description": "A vue fullscreen-esque navigation plugin",
   "main": "dist/vue-panel-navigation.cjs.js",
   "module": "dist/vue-panel-navigation.esm.js",
   "browser": "dist/vue-panel-navigation.umd.js",
   "scripts": {
     "build": "rollup -c",
+    "watch": "rollup -c -w",
     "serve": "vite --config vite.config.js serve demo"
   },
   "repository": {
